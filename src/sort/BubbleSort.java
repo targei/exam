@@ -4,6 +4,7 @@ package sort;
  * Created by liq on 2017/9/21.
  *
  * 冒泡排序
+ * 时间负责度：O（N*N）
  */
 public class BubbleSort {
 
