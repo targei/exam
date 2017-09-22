@@ -8,7 +8,7 @@ package sort;
  */
 public class InsertionSort {
 
-    private void sort(int[] data){
+    private void sorts(int[] data){
         for(int p=1;p<data.length;p++){//p：待排序。 1 to p-1 已经排序
             int temp=data[p];
             int i=p;
@@ -22,7 +22,7 @@ public class InsertionSort {
     public static void main(String args[]){
         InsertionSort insertion = new InsertionSort();
         int[] data ={6,4,1,10,21,3};
-        insertion.sort(data);
+        insertion.sorts(data);
         for(int x : data){
             System.out.print( x+" ");
         }
