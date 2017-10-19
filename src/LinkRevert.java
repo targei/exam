@@ -121,9 +121,9 @@ class Node {
     }
     public String toString(){
         if(next == null){
-            return "I'm link head, value is :"+v;
+            return "I'm link head, weight is :"+v;
         }else{
-            return "Node value:"+v;
+            return "Node weight:"+v;
         }
     }
 }
