@@ -6,7 +6,7 @@ import java.util.Arrays;
  * https://leetcode.com/problems/longest-repeating-character-replacement/description/
  * 424.Longest Repeating Character Replacement
  */
-public class Largest_repeat_substring {
+public class LargestRepeatSubstring {
     public static int find(String origStr,int replaceTimes){
         int[] count = new int[128];
         int maxLength=0,maxCount=0;
