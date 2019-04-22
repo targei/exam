@@ -1,28 +1,24 @@
 /**
  * Created by liq on 2017/9/20.
  */
+
 public class LinkRevert {
 
     //==============
     // 非递归写法
     //===============
 
-    private Node revertFor(Node head) {
+    private Node revertWithLoop(Node head) {
         if(head==null){
             return null;
         }
 
-        Node currNode = head;
         Node pre=null;
-        while(true) {
-            if (currNode != null) {
-                Node next = currNode.getNext();
-                currNode.setNext(pre);
-                pre = currNode;
-                currNode = next;
-            }else{
-                break;
-            }
+        Node curNode = head;
+        while(curNode != null) {
+                curNode.setNext(pre);
+                pre = curNode;
+                curNode = curNode.getNext();;
         }
         head.setNext(null);
 
@@ -98,14 +94,13 @@ public class LinkRevert {
         node2.setNext(node3);
         //Node newHead = object.revertRecursive(head);
 //        Node newHead = object.revert_simple(head);
-        Node newHead = object.revertFor(head);
+        Node newHead = object.revertWithLoop(head);
 
         object.printLink(newHead);
     }
-
-
-
 }
+
+//common define for Node.
 class Node {
     int v=0;
     private Node next = null;
